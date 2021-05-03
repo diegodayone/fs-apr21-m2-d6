@@ -18,6 +18,50 @@
             background: #141414;
             /* acquamarine, gainsboro, purple, rgba*/
         }
+
+        /* .img-fluid {
+            max-height: 160px;
+            object-fit: cover;
+        } */
+
+        .fab {
+            font-size: 30px;
+            color: lightgray;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* 
+  hide the scrollbar but keep the feature in place
+  display:none; */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+
+        .right-menu button:hover {
+            background:white;
+            color:black;
+        }
     </style>
 </head>
 
@@ -49,20 +93,252 @@
                 <span class="mx-2">KIDS</span>
                 <i class="fas fa-bell mx-2"></i>
                 <div class="dropdown d-inline mx-2">
-                    <i class="fas fa-hat-wizard"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button">
-                      Dropdown button
-                    </button> -->
+                    <i class="fas fa-hat-wizard dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"></i>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">My Movies</a>
-                      <a class="dropdown-item" href="#">My Profile</a>
-                      <a class="dropdown-item" href="#">Billing</a>
-                      <a class="dropdown-item" style="color:red;" href="#">Log Out</a>
+                        <a class="dropdown-item" href="#">My Movies</a>
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">Billing</a>
+                        <a class="dropdown-item" style="color:red;" href="#">Log Out</a>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
     </nav>
+
+    <div class="container-fluid">
+        <div class="d-flex ">
+            <h2 class="text-white mr-5 mb-4">TV Shows</h2>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle border-white rounded-0"
+                    style="background-color: #141414;" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Genres
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">SciFi</a>
+                    <a class="dropdown-item" href="#">Romance</a>
+                    <a class="dropdown-item" href="#">Horror</a>
+                </div>
+            </div>
+
+            <div class="ml-auto right-menu">
+                <button class="fas fa-th-large p-2 border-white rounded-0 text-white bg-dark"></button>
+                <button class="fas fa-list p-2 border-white rounded-0 text-white bg-dark"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="movies-list">
+        <h4 class="text-white mb-4">Watch it now</h2>
+            <!-- 
+                If you want the content to be scrollable in a flex container, BE SURE of using flex-wrap: nowrap;
+             -->
+            <div class="row no-gutters mb-4 text-center"
+                style="flex-wrap: nowrap; overflow-x:auto; white-space: nowrap;">
+
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+                    <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+                </div>
+            </div>
+    </div>
+    <!-- 
+    X X X X X X X X X X X X
+    X X X X X X X X 0 0 0 0
+    0 0 X X X X X X X X 0 0
+    -->
+    <footer class="container">
+        <div class="row">
+            <div class="col col-8 offset-2 text-white mt-5">
+                <div class="row mb-3">
+                    <div class="col">
+                        <i class="fab fa-facebook-square mr-2"></i>
+                        <i class="fab fa-twitter-square mr-2"></i>
+                        <i class="fab fa-youtube-square mr-2"></i>
+                        <i class="fab fa-instagram-square"></i>
+                    </div>
+
+                </div>
+                <div class="row no-gutters">
+                    <div class="col col-12 col-md-3 text-white">
+
+                        <ul>
+                            <li>Menu voice 1</li>
+                            <li>Menu voice 2</li>
+                            <li>Menu voice 3</li>
+                            <li>Menu voice 4</li>
+                        </ul>
+                    </div>
+                    <div class="col col-12 col-md-3">
+                        <ul>
+                            <li>Menu voice 1</li>
+                            <li>Menu voice 2</li>
+                            <li>Menu voice 3</li>
+                            <li>Menu voice 4</li>
+                        </ul>
+                    </div>
+                    <div class="col col-12 col-md-3">
+                        <ul>
+                            <li>Menu voice 1</li>
+                            <li>Menu voice 2</li>
+                            <li>Menu voice 3</li>
+                            <li>Menu voice 4</li>
+                        </ul>
+                    </div>
+                    <div class="col col-12 col-md-3">
+                        <ul>
+                            <li>Menu voice 1</li>
+                            <li>Menu voice 2</li>
+                            <li>Menu voice 3</li>
+                            <li>Menu voice 4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, vitae beatae? Inventore fuga
+                    soluta nam doloremque necessitatibus, eius beatae magni modi, provident eos quia! Fuga sapiente ex
+                    nobis! Qui, ex!
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <table class="w-100 text-center text-white">
+        <!-- <tbody> -->
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <!-- <td>wannabe new column</td> -->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <!-- <td>wannabe new column</td> -->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <!-- <td>wannabe new column</td> -->
+            </tr>
+        <!-- </tbody> -->
+    </table>
+
+    <!-- 
+        white-space: nowrap => the content should stay on the same line even if the width is > than the parent width
+        overflow-x: auto => makes the content scrollable with the scrollbar
+     -->
+    <div style="white-space: nowrap; overflow-x:auto;">
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+        <img src="http://placehold.it/300x160" />
+    </div>
+
+    <script>
+
+        function addColumn(content) {
+            // get a refefrence to the tbody
+            const mytable = document.querySelector("table")
+            // get a reference to EVERY row
+            const rows = mytable.querySelectorAll("tr")
+            for(let i = 0; i < rows.length; i++){
+                // add a cell to every row
+                const currentRow = rows[i]
+                const myTd = document.createElement("td")
+                myTd.innerText = content
+                currentRow.appendChild(myTd)
+            }
+        }
+
+        const movies = [
+            // "http://placehold.it/300x160",
+            // "http://placehold.it/300x160",
+            // "http://placehold.it/300x160",
+            // "http://placehold.it/300x160",
+            // "http://placehold.it/300x160",
+            // "http://placehold.it/300x160"
+
+            "https://images-na.ssl-images-amazon.com/images/I/61Zf5g-xUxL._AC_SL1039_.jpg",
+            "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg",
+            "https://m.media-amazon.com/images/M/MV5BNDc2NjU0MTcwNV5BMl5BanBnXkFtZTcwMjg4MDg2OQ@@._V1_.jpg",
+            "https://images-na.ssl-images-amazon.com/images/I/61Zf5g-xUxL._AC_SL1039_.jpg",
+            "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg",
+            "https://m.media-amazon.com/images/M/MV5BNDc2NjU0MTcwNV5BMl5BanBnXkFtZTcwMjg4MDg2OQ@@._V1_.jpg",
+        ]
+
+        window.onload = function () {
+            createMovieList("New Movies", movies)
+            createMovieList("Watch it again", movies)
+            createMovieList("New releases", movies)
+        }
+
+        function createMovieList(listTitle, movies) {
+            const parentDiv = document.getElementById("movies-list")
+            //    <h4 class="text-white mb-4">New Releases</h2>
+            const h4 = document.createElement("h4")
+            h4.classList.add("text-white")
+            h4.classList.add("mb-4")
+            h4.innerText = listTitle
+            parentDiv.appendChild(h4)
+            //    <div class="row no-gutters mb-4 text-center">
+            const row = document.createElement("div")
+            row.classList.add("row", "no-gutters", "mb-4", "text-center")
+            //    <div class="col-12 col-md-4 col-lg-2 pr-1 mb-1">
+            //      <img src="http://placehold.it/300x160" alt="movie poster" class="img-fluid" />
+            //    </div>
+            for (let i = 0; i < movies.length; i++) {
+                const column = document.createElement("div")
+                column.classList.add("col-12", "col-md-4", "col-lg-2", "pr-1", "mb-1")
+                const img = document.createElement("img")
+                img.src = movies[i] //"http://placehold.it/300x160"
+                img.addEventListener("click", function(e) { // when the pic is clicked, please do:
+                    const clickedPicture = e.currentTarget // take a reference to the picture
+                    const column = clickedPicture.closest(".col-12") // find the closest column
+                    column.classList.add("d-none") // add the d-none class to the column (d-none = display:none;)
+                    // clickedPicture.classList.add("d-none")
+                })
+                img.classList.add("img-fluid")
+                column.appendChild(img)
+                row.appendChild(column)
+            }
+            parentDiv.appendChild(row)
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
